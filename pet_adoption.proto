@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package pet_adoption;
+
+option go_package = "pet_adoption/";
+ 
+// Pet represents the information about a pet
+message Pet {
+    string name = 1;
+    string gender = 2;
+    int32 age = 3;
+    string breed = 4;
+    string picture = 5;
+}
+
+// Request message for registering a pet
+message RegisterPetRequest {
+    string name = 1;
+    string gender = 2;
+    int32 age = 3;
+    string breed = 4;
+    string picture = 5;
+}
+
+// Response message for registering a pet
+message RegisterPetResponse {
+    string message = 1;
+}
+
+// Request message for searching a pet
+message SearchPetRequest {
+    string name = 1;
+    string gender = 2;
+    int32 age = 3;
+    string breed = 4;
+}
+
+// Response message for searching a pet
+message SearchPetResponse {
+    repeated Pet pets = 1; // A list of pets
+}
+
+// PetAdoptionService defines the pet adoption service
+service PetAdoptionService {
+    rpc RegisterPet(RegisterPetRequest) returns (RegisterPetResponse);
+    rpc SearchPet(SearchPetRequest) returns (SearchPetResponse);
+}

@@ -1,0 +1,13 @@
+# Step 1: Use the official Go image as the base image
+FROM python
+
+# Step 2: Set the working directory inside the container
+WORKDIR /app
+
+# Step 3: Copy the remaining files (like source code) to the container
+COPY . .
+
+# Step 4: Build the Go application
+RUN pip install -r requirements.txt
+
+

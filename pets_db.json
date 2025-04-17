@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Buddy",
+        "gender": "Male",
+        "age": 2,
+        "breed": "Labrador",
+        "picture": "path/to/pic"
+    },
+    {
+        "name": "Aleem",
+        "gender": "Male",
+        "age": 23,
+        "breed": "Human",
+        "picture": "/path/to/pic"
+    },
+    {
+        "name": "Tommy",
+        "gender": "Female",
+        "age": 12,
+        "breed": "German Shepard",
+        "picture": "/path/to/pic"
+    }
+]
